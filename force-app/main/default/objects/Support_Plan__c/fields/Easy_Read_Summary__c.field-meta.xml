@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Easy_Read_Summary__c</fullName>
+    <label>Easy Read Summary</label>
+    <description>Plain-language version of the plan summary. Short sentences, one idea per line.</description>
+    <type>LongTextArea</type>
+    <length>5000</length>
+    <visibleLines>6</visibleLines>
+    <required>false</required>
+</CustomField>

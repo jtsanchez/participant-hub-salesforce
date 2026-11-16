@@ -1,0 +1,99 @@
+:host {
+    display: block;
+}
+
+.card {
+    background: var(--hub-card, #f4f6f9);
+    border: 2px solid var(--hub-border, #6b6b6b);
+    border-radius: 0.75em;
+    padding: 1.25em;
+    margin-bottom: 1.25em;
+}
+
+.h2 {
+    font-size: 1.35em;
+    font-weight: 700;
+    margin: 0 0 0.5em;
+}
+
+.muted {
+    color: var(--hub-muted, #4a4a4a);
+    margin: 0 0 1em;
+}
+
+.field {
+    margin-bottom: 1em;
+}
+
+.field label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.3em;
+}
+
+.field select,
+.field input[type='text'],
+.field input[type='tel'],
+.field textarea {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 44px;
+    padding: 0.5em 0.7em;
+    font: inherit;
+    color: var(--hub-fg, #1b1b1b);
+    background: var(--hub-bg, #ffffff);
+    border: 2px solid var(--hub-border, #6b6b6b);
+    border-radius: 0.4em;
+}
+
+.field.check {
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+}
+
+.field.check label {
+    margin: 0;
+}
+
+.field.check input {
+    width: 1.5em;
+    height: 1.5em;
+    accent-color: var(--hub-accent, #0b5cab);
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1em;
+}
+
+.btn {
+    min-height: 44px;
+    padding: 0.5em 1.2em;
+    font: inherit;
+    font-weight: 700;
+    border: 2px solid var(--hub-accent, #0b5cab);
+    border-radius: 0.4em;
+    background: var(--hub-accent, #0b5cab);
+    color: var(--hub-accent-contrast, #ffffff);
+    cursor: pointer;
+}
+
+.btn[disabled] {
+    opacity: 0.7;
+    cursor: progress;
+}
+
+.status {
+    font-weight: 600;
+}
+
+select:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+.btn:focus-visible {
+    outline: 3px solid var(--hub-focus, #0b5cab);
+    outline-offset: 2px;
+}

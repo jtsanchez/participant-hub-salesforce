@@ -1,0 +1,36 @@
+<template>
+    <div class={containerClass} style={containerStyle}>
+        <header class="header">
+            <div>
+                <h1 class="h1">My support plan</h1>
+                <p lwc:if={hasPlan} class="sub">Plan for {plan.participantName}</p>
+            </div>
+            <c-hub-accessibility-toolbar
+                text-size-label={textSizeLabel}
+                high-contrast={highContrast}
+                easy-read={easyRead}
+                ontextsizechange={handleTextSize}
+                oncontrastchange={handleContrast}
+                oneasyreadchange={handleEasyRead}
+            ></c-hub-accessibility-toolbar>
+        </header>
+
+        <div class="content">
+            <p lwc:if={isLoading} role="status" class="notice">Loading your plan…</p>
+
+            <div lwc:if={hasError} role="alert" class="notice alert">
+                <strong>Problem:</strong> {error}
+            </div>
+
+            <p lwc:if={showEmpty} class="notice">
+                We could not find a plan for you yet. If you think this is a mistake, please contact your support team.
+            </p>
+
+            <template lwc:if={hasPlan}>
+                <c-hub-plan-summary plan={plan} easy-read={easyRead}></c-hub-plan-summary>
+                <c-hub-preferences-editor plan={plan} easy-read={easyRead} onplanchange={handlePlanChange}></c-hub-preferences-editor>
+                <c-hub-change-requests plan={plan} easy-read={easyRead} onplanchange={handlePlanChange}></c-hub-change-requests>
+            </template>
+        </div>
+    </div>
+</template>

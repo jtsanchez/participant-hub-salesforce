@@ -1,0 +1,59 @@
+<template>
+    <section class="card" aria-labelledby="summary-heading">
+        <div class="row">
+            <h2 id="summary-heading" class="h2">{t.heading}</h2>
+            <span class="chip">{statusLabel}</span>
+        </div>
+
+        <dl class="facts">
+            <div class="fact">
+                <dt>{t.hours}</dt>
+                <dd>{hoursText}</dd>
+            </div>
+            <div class="fact">
+                <dt>{t.start}</dt>
+                <dd>{startText}</dd>
+            </div>
+            <div class="fact">
+                <dt>{t.end}</dt>
+                <dd>{endText}</dd>
+            </div>
+        </dl>
+
+        <div class="summary">
+            <template for:each={summaryLines} for:item="line">
+                <p key={line.key} class="line">{line.text}</p>
+            </template>
+        </div>
+    </section>
+
+    <section class="card" aria-labelledby="goals-heading">
+        <h2 id="goals-heading" class="h2">{t.goals}</h2>
+        <p lwc:if={noGoals} class="muted">{t.noGoals}</p>
+        <ul class="goals">
+            <template for:each={goals} for:item="goal">
+                <li key={goal.key} class="goal">
+                    <div class="row">
+                        <h3 class="h3">{goal.name}</h3>
+                        <span class="chip">{goal.statusText}</span>
+                    </div>
+                    <p lwc:if={goal.showDescription} class="muted">{goal.description}</p>
+                    <div
+                        class="bar"
+                        role="progressbar"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        aria-valuenow={goal.pct}
+                        aria-label={goal.progressLabel}
+                    >
+                        <div class="fill" style={goal.barStyle}></div>
+                    </div>
+                    <p class="muted">
+                        {goal.pct}% done
+                        <span lwc:if={goal.targetText}> · Target: {goal.targetText}</span>
+                    </p>
+                </li>
+            </template>
+        </ul>
+    </section>
+</template>

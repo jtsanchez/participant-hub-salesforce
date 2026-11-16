@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Plan_Length_Weeks__c</fullName>
+    <label>Plan Length (weeks)</label>
+    <description>Calculated from start and end dates.</description>
+    <type>Number</type>
+    <precision>18</precision>
+    <scale>1</scale>
+    <formula>IF(AND(NOT(ISBLANK(Start_Date__c)), NOT(ISBLANK(End_Date__c))), (End_Date__c - Start_Date__c) / 7, null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+</CustomField>

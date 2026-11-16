@@ -1,0 +1,16 @@
+<template>
+    <div class="toolbar" role="group" aria-label="Display settings">
+        <div class="cluster" role="group" aria-label="Text size">
+            <button type="button" class="btn secondary" aria-label="Make text smaller" onclick={handleSmaller}>A−</button>
+            <span class="size">Text size {textSizeLabel}</span>
+            <button type="button" class="btn secondary" aria-label="Make text larger" onclick={handleLarger}>A+</button>
+            <button type="button" class="btn secondary" onclick={handleReset}>Reset</button>
+        </div>
+        <button type="button" class="btn secondary" aria-pressed={contrastPressed} onclick={handleContrast}>
+            High contrast: {contrastState}
+        </button>
+        <button type="button" class="btn secondary" aria-pressed={easyReadPressed} onclick={handleEasyRead}>
+            Easy Read: {easyReadState}
+        </button>
+    </div>
+</template>

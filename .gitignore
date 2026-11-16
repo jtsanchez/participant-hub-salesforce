@@ -1,0 +1,31 @@
+# Salesforce CLI and local org data
+.sf/
+.sfdx/
+.localdevserver/
+**/.sfdx/
+**/.sf/
+deploy-options.json
+orgs/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Dependencies and build output
+node_modules/
+coverage/
+dist/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Local secrets (never commit these)
+.env
+.env.*
+*.key
+*.pem

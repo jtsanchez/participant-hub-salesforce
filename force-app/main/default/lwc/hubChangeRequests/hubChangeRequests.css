@@ -1,0 +1,135 @@
+:host {
+    display: block;
+}
+
+.card {
+    background: var(--hub-card, #f4f6f9);
+    border: 2px solid var(--hub-border, #6b6b6b);
+    border-radius: 0.75em;
+    padding: 1.25em;
+    margin-bottom: 1.25em;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75em;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.h2 {
+    font-size: 1.35em;
+    font-weight: 700;
+    margin: 0 0 0.5em;
+}
+
+.h3 {
+    font-size: 1.1em;
+    font-weight: 700;
+    margin: 0;
+}
+
+.muted {
+    color: var(--hub-muted, #4a4a4a);
+    margin: 0 0 1em;
+}
+
+.field {
+    margin-bottom: 1em;
+}
+
+.field label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.3em;
+}
+
+.field select,
+.field textarea {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 44px;
+    padding: 0.5em 0.7em;
+    font: inherit;
+    color: var(--hub-fg, #1b1b1b);
+    background: var(--hub-bg, #ffffff);
+    border: 2px solid var(--hub-border, #6b6b6b);
+    border-radius: 0.4em;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1em;
+}
+
+.btn {
+    min-height: 44px;
+    padding: 0.5em 1.2em;
+    font: inherit;
+    font-weight: 700;
+    border: 2px solid var(--hub-accent, #0b5cab);
+    border-radius: 0.4em;
+    background: var(--hub-accent, #0b5cab);
+    color: var(--hub-accent-contrast, #ffffff);
+    cursor: pointer;
+}
+
+.btn[disabled] {
+    opacity: 0.7;
+    cursor: progress;
+}
+
+.status {
+    font-weight: 600;
+}
+
+.chip {
+    display: inline-block;
+    padding: 0.15em 0.8em;
+    border: 2px solid var(--hub-accent, #0b5cab);
+    border-radius: 999px;
+    color: var(--hub-accent, #0b5cab);
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.requests {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.request {
+    border-top: 2px solid var(--hub-border, #6b6b6b);
+    padding: 1em 0;
+}
+
+.request:first-child {
+    border-top: 0;
+    padding-top: 0;
+}
+
+.request .muted {
+    margin: 0.25em 0;
+}
+
+.body {
+    margin: 0.4em 0;
+    white-space: pre-line;
+}
+
+.response {
+    margin: 0.4em 0 0;
+    padding: 0.6em 0.8em;
+    border-left: 4px solid var(--hub-accent, #0b5cab);
+}
+
+select:focus-visible,
+textarea:focus-visible,
+.btn:focus-visible {
+    outline: 3px solid var(--hub-focus, #0b5cab);
+    outline-offset: 2px;
+}
