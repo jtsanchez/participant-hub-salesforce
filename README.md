@@ -4,8 +4,8 @@ An accessible participant portal for nonprofit support organisations, built on *
 
 ## Demo video
 
-<!-- Replace the line below with your video. On GitHub, click the pencil icon to edit this README, then drag your .mp4 file into this spot. GitHub turns it into a video player. -->
-*Demo video coming soon.*
+[screen-capture (3).webm](https://github.com/user-attachments/assets/3b40fd31-4109-4687-9c1e-9c24cfd707a8)
+
 
 > Demo project. All people, organisations and plan details are fictional. The data model is **inspired by** Salesforce Nonprofit Cloud (programs, enrollments, plans) but uses custom objects, so it runs in a free Developer Edition org. It is not built on Nonprofit Cloud.
 
